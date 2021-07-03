@@ -2,7 +2,8 @@ const path = require('path');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/', // 设置output.publicPath，区分生产环境和开发环境
+  // vue-router路由配置中的base: BASE_URL 跟 publicPath 选项相符，应用会部署到的基础路径。
+  publicPath: process.env.VUE_APP_BASE_URL,
   outputDir: 'dist',
   assetsDir: 'static',
   productionSourceMap: false,

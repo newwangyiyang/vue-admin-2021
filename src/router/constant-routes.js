@@ -73,6 +73,19 @@ export default [
     ],
   },
   {
+    path: '/amimate',
+    component: Layout,
+    redirect: '/animate/index',
+    children: [
+      {
+        path: 'index',
+        name: 'Animation',
+        component: () => import('@/views/Animate'),
+        meta: { title: 'Animation', icon: 'form' },
+      },
+    ],
+  },
+  {
     path: '/guide',
     component: Layout,
     children: [
