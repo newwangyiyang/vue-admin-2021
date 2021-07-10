@@ -70,3 +70,10 @@ div:focus {
 .app-container {
   padding: 20px;
 }
+
+.base-card {
+  transition: all ease 0.3s;
+  &:hover {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  }
+}

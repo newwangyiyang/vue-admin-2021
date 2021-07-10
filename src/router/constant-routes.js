@@ -12,6 +12,17 @@ export default [
     hidden: true,
   },
   {
+    path: '/redirect',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: '/redirect/:path(.*)',
+        component: () => import('@/views/Redirect/index'),
+      },
+    ],
+  },
+  {
     path: '/500',
     component: Layout,
     redirect: '/500/index',
