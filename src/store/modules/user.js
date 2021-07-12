@@ -99,6 +99,9 @@ const actions = {
 
     // reset visited views and cached views
     dispatch('tagsView/delAllViews', null, { root: true });
+    router.replace({
+      path: `/redirect/dashboard`,
+    });
   },
 };
 
